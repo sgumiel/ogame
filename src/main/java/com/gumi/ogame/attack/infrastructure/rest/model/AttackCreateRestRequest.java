@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AddAttackRestRequest implements Serializable {
+public class AttackCreateRestRequest implements Serializable {
 
   private static final long serialVersionUID = 5912471420492702493L;
 
