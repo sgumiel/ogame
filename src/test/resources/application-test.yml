@@ -1,0 +1,28 @@
+server:
+  servlet:
+    context-path: /ogame
+
+logging:
+  level:
+    root: INFO
+    com.gumi.ogame: DEBUG
+
+spring:
+  h2:
+    console:
+      enabled: false
+      path: /h2-console
+  datasource:
+    #url: jdbc:h2:file:/home/sgumiel/personal/proyectos/ogamedb/ogamedb-test.db;
+    url: jdbc:h2:mem:OGAME;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  jpa:
+    properties:
+      hibernate:
+        use_sql_comments: false
+        show_sql: false
+        format_sql: false
+    hibernate:
+      ddl-auto: create
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_null
